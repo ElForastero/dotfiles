@@ -1,4 +1,4 @@
-" https://github.com/tpope/vim-pathogen
+" https://github.com/junegunn/vim-plug
 call plug#begin('~/.vim/plugged')
 Plug 'KeitaNakamura/neodark.vim'
 call plug#end()

@@ -1,5 +1,5 @@
 {
-  "scripts" {
+  "scripts": {
     "commit": "git-cz"
   },
   "devDependencies": {

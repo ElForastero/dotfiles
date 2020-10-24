@@ -1,0 +1,12 @@
+[user]
+        name = Eugene Dzhumak
+        email = elforastero@ya.ru
+[diff]
+        tool = phpstorm
+[difftool "phpstorm"]
+        cmd = phpstorm diff $LOCAL $REMOTE
+[merge]
+        tool = phpstorm
+[mergetool "phpstorm"]
+        cmd = phpstorm merge $LOCAL $REMOTE $BASE $MERGED
+        trustExitCode = true

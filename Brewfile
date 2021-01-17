@@ -12,7 +12,7 @@ brew 'nvm'
 brew 'redis'
 brew 'yarn'
 brew 'postgresql'
-brew 'redise
+brew 'redis'
 brew 'svgo'
 
 cask 'firefox'

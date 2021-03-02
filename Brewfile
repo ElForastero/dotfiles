@@ -30,6 +30,7 @@ cask 'appcleaner'
 cask 'zoom'
 cask 'kap'
 cask 'iglance'
+cask 'alt-tab'
 
 mas 'Spark', id: 1176895641
 mas 'VK Messenger', id: 1265763895

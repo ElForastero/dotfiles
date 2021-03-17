@@ -15,6 +15,7 @@ brew 'postgresql'
 brew 'redis'
 brew 'svgo'
 
+cask 'iterm2'
 cask 'visual-studio-code'
 cask 'firefox'
 cask 'google-chrome'

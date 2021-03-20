@@ -14,6 +14,7 @@ brew 'yarn'
 brew 'postgresql'
 brew 'redis'
 brew 'svgo'
+brew 'watchman'
 
 cask 'iterm2'
 cask 'visual-studio-code'

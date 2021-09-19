@@ -16,6 +16,7 @@ brew 'postgresql'
 brew 'redis'
 brew 'svgo'
 brew 'watchman'
+brew "spaceship"
 
 cask 'iterm2'
 cask 'visual-studio-code'

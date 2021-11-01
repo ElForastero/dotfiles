@@ -1,6 +1,12 @@
 [user]
         name = Eugene Dzhumak
         email = elforastero@ya.ru
+[pull]
+        rebase = true
+[push]
+        default = current
+[fetch]
+        prune = true
 [diff]
         tool = phpstorm
 [difftool "phpstorm"]

@@ -19,11 +19,10 @@ export NVM_COMPLETION=true
 
 ZSH_THEME="robbyrussell"
 
-plugins=(zsh-nvm git react-native yarn npm)
+plugins=(zsh-nvm git react-native yarn npm gpg-agent)
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.aliases
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Set Spaceship ZSH as a prompt
 autoload -U promptinit; promptinit

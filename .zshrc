@@ -19,7 +19,7 @@ export NVM_COMPLETION=true
 
 ZSH_THEME="robbyrussell"
 
-plugins=(zsh-nvm git react-native yarn npm gpg-agent)
+plugins=(zsh-nvm git react-native yarn npm gpg-agent kubectl)
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.aliases

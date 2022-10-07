@@ -23,7 +23,8 @@ plugins=(zsh-nvm git react-native yarn npm gpg-agent kubectl)
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.aliases
+source <(kubectl completion zsh)
 
 # Set Spaceship ZSH as a prompt
-autoload -U promptinit; promptinit
+# autoload -U promptinit; promptinit
 prompt spaceship

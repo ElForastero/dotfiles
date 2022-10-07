@@ -1,3 +1,6 @@
+[core]
+        quotepath = off
+        pager = delta
 [user]
         name = Eugene Dzhumak
         email = elforastero@ya.ru
@@ -14,10 +17,18 @@
         prune = true
 [diff]
         tool = phpstorm
+        colorMoved = default
 [difftool "phpstorm"]
-        cmd = phpstorm diff $LOCAL $REMOTE
+        cmd = phpstorm diff "$LOCAL" "$REMOTE"
 [merge]
         tool = phpstorm
+        conflictstyle = diff3
 [mergetool "phpstorm"]
-        cmd = phpstorm merge $LOCAL $REMOTE $BASE $MERGED
+        cmd = phpstorm merge "$LOCAL" "$REMOTE" "$BASE" "$MERGED"
         trustExitCode = true
+[interactive]
+        diffFilter = delta --color-only
+[delta]
+        navigate = true
+        features = side-by-side line-numbers decorations
+        whitespace-error-style = 22 reverse

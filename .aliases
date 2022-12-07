@@ -1,3 +1,5 @@
 alias kubectl="minikube kubectl --"
 alias gpgyubi="gpg-connect-agent \"scd serialno\" \"learn --force\" /bye"
 alias vim=nvim
+alias reanimatetoken='ssh-add -e /usr/local/lib/opensc-pkcs11.so; ssh-add -s /usr/local/lib/opensc-pkcs11.so'
+

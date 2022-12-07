@@ -1,3 +1,5 @@
+tap 'teamookla/speedtest'
+
 brew 'tree'
 brew 'svgo'
 brew 'bat'
@@ -20,9 +22,12 @@ brew 'git-delta'
 brew 'golang-migrate'
 brew 'jesseduffield/lazygit/lazygit'
 brew 'nvim'
+brew 'yubico-piv-tool'
+brew 'git-delta'
 
 brew 'cocoapods'
 brew 'watchman'
+brew 'speedtest'
 
 cask 'iterm2'
 cask 'visual-studio-code'
@@ -35,7 +40,8 @@ cask 'sublime-text'
 cask 'yandex-disk'
 cask 'zoom'
 cask 'keepassxc'
-cask 'nerd-fonts-jetbrains-mono'
+cask 'font-jetbrains-mono-nerd-font'
+cask 'rectangle'
 
 brew 'gnupg'
 brew 'pinentry-mac'

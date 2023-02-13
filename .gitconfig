@@ -32,3 +32,6 @@
         navigate = true
         features = side-by-side line-numbers decorations
         whitespace-error-style = 22 reverse
+[blame]
+	ignoreRevsFile = .git-blame-ignore-revs
+	markIgnoredLines = true

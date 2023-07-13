@@ -8,6 +8,7 @@ brew 'htop'
 brew 'mc'
 brew 'wget'
 brew 'qrencode'
+brew 'httpie'
 
 brew 'php'
 brew 'golang'
@@ -28,7 +29,6 @@ brew 'git-delta'
 
 brew 'cocoapods'
 brew 'watchman'
-brew 'speedtest'
 
 brew 'homebrew/cask-fonts/font-jetbrains-mono-nerd-font'
 

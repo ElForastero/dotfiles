@@ -1,53 +1,93 @@
 tap 'teamookla/speedtest'
 tap 'jesseduffield/lazygit'
 
+brew 'fluxcd/tap/flux'
+
+# Utilities
 brew 'tree'
 brew 'svgo'
 brew 'bat'
 brew 'htop'
 brew 'mc'
 brew 'wget'
+brew 'curl'
 brew 'qrencode'
 brew 'httpie'
+brew 'cowsay'
+brew 'jq'
 
-brew 'php'
-brew 'golang'
-brew 'composer'
+# Environments
 brew 'node'
-brew 'go'
 brew 'nvm'
-brew 'redis'
 brew 'yarn'
-brew 'svgo'
-brew 'spaceship'
-brew 'git-delta'
+brew 'pnpm'
+brew 'php'
+brew 'composer'
+brew 'go'
+brew 'go-task'
 brew 'golang-migrate'
-brew 'jesseduffield/lazygit/lazygit'
-brew 'nvim'
-brew 'yubico-piv-tool'
-brew 'git-delta'
+brew 'golangci-lint'
 
+# Storages
+brew 'redis'
+
+# Git
+brew 'git-delta'
+brew 'jesseduffield/lazygit/lazygit'
+
+# Prompt
+brew 'starship'
+
+# Productivity
+cask 'rectangle'
+
+# React Native
 brew 'cocoapods'
 brew 'watchman'
 
-brew 'homebrew/cask-fonts/font-jetbrains-mono-nerd-font'
+# Fonts
+cask 'font-jetbrains-mono-nerd-font'
+cask 'font-fira-code-nerd-font'
 
+# Clouds
+cask 'yandex-disk'
+
+# Dev tools
 cask 'iterm2'
 cask 'visual-studio-code'
-cask 'firefox'
-cask 'google-chrome'
-cask 'discord'
-cask 'telegram'
 cask 'jetbrains-toolbox'
 cask 'sublime-text'
-cask 'yandex-disk'
-cask 'zoom'
-cask 'keepassxc'
-cask 'rectangle'
+cask 'insomnia'
+brew 'neovim'
 
+# Browsers
+cask 'firefox'
+cask 'google-chrome'
+
+# Communication
+cask 'telegram'
+cask 'discord'
+cask 'zoom'
+
+# Security
 brew 'gnupg'
+brew 'sops'
 brew 'pinentry-mac'
 brew 'ykman'
-brew 'paperkey'
+brew 'yubico-piv-tool'
+brew 'yubikey-personalization'
 brew 'openssh'
 brew 'libfido2'
+
+# DevOps
+brew 'kubectl'
+brew 'helm'
+brew 'ansible'
+brew 'hashicorp/tap/terraform'
+brew 'docker'
+brew 'docker-compose'
+brew 'colima'
+brew 'k9s'
+
+# Misc
+cask 'raspberry-pi-imager'

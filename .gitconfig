@@ -4,28 +4,17 @@
 [user]
         name = Eugene Dzhumak
         email = elforastero@ya.ru
-        signingkey = DF9F7E98D709CD4C9097FE673716F24E0A8F01B9
+        #signingkey = DF9F7E98D709CD4C9097FE673716F24E0A8F01B9
 [commit]
-        gpgsign = true
+        #gpgsign = true
 [tag]
-        gpgSign = true
+        #gpgSign = true
 [pull]
         rebase = true
 [push]
         default = current
 [fetch]
         prune = true
-[diff]
-        tool = phpstorm
-        colorMoved = default
-[difftool "phpstorm"]
-        cmd = phpstorm diff "$LOCAL" "$REMOTE"
-[merge]
-        tool = phpstorm
-        conflictstyle = diff3
-[mergetool "phpstorm"]
-        cmd = phpstorm merge "$LOCAL" "$REMOTE" "$BASE" "$MERGED"
-        trustExitCode = true
 [interactive]
         diffFilter = delta --color-only
 [delta]

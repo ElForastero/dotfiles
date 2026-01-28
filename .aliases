@@ -29,4 +29,4 @@ alias h='history'
 
 # Machine-specific / optional (minikube, YubiKey, etc.)
 # Uncomment or override in local config as needed:
-alias vim='nvim'
+# alias vim='nvim'

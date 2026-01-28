@@ -19,6 +19,7 @@ case "${1:-full}" in
     ;;
   --dotfiles-only)
     "$ROOT/scripts/link-dotfiles.sh"
+    bash "$ROOT/scripts/install-vim-plug.sh"
     ;;
   --macos-defaults)
     "$ROOT/scripts/macos-defaults.sh"
@@ -26,6 +27,7 @@ case "${1:-full}" in
   full)
     "$ROOT/scripts/install-brew.sh"
     "$ROOT/scripts/link-dotfiles.sh"
+    bash "$ROOT/scripts/install-vim-plug.sh"
     "$ROOT/scripts/macos-defaults.sh"
     ;;
   *)

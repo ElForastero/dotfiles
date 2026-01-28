@@ -17,11 +17,9 @@ link() {
 
 link .zshrc              .zshrc
 link .aliases            .aliases
-link .gitconfig          .gitconfig
 link .editorconfig       .editorconfig
-link .vimrc              .vimrc
+link .gitconfig          .gitconfig
 link .ideavimrc          .ideavimrc
-link .prettierrc         .prettierrc
 link init.vim            .config/nvim/init.vim
 link ssh/config          .ssh/config
 

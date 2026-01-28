@@ -26,12 +26,13 @@ Or run specific steps:
 
 - **Brewfile** — Homebrew formulae and casks (CLI tools, GUIs, fonts). Install with `brew bundle` or via `setup.sh`.
 - **setup.sh** — Entry point: runs all steps or a single one (`--brew-only`, `--dotfiles-only`, `--macos-defaults`). Delegates to `scripts/install-brew.sh`, `scripts/link-dotfiles.sh`, and `scripts/macos-defaults.sh`.
-- **Dotfiles** — `.zshrc`, `.aliases`, `.gitconfig`, `.editorconfig`, `.vimrc`, `.ideavimrc`, `.prettierrc`, `init.vim` (→ `~/.config/nvim/`), `.vscode/settings.json`, `ssh/config`, and optionally `gpg-agent.conf` / `gpg.conf` → `~/.gnupg/`.
+- **Dotfiles** — `.zshrc`, `.aliases`, `.gitconfig`, `.editorconfig`, `.vimrc`, `.ideavimrc`, `.prettierrc`, `init.vim` (→ `~/.config/nvim/`), `ssh/config`, and optionally `gpg-agent.conf` / `gpg.conf` → `~/.gnupg/`.
 
 ## Scripts (in `scripts/`)
 
 - **install-brew.sh** — Xcode CLI check, Homebrew install, `brew bundle`. Can be run alone: `./scripts/install-brew.sh`
 - **link-dotfiles.sh** — Symlink repo dotfiles into `$HOME`, backing up existing files. Run alone: `./scripts/link-dotfiles.sh`
+- **install-vim-plug.sh** — Install vim-plug and run `PlugInstall` for Vim and Neovim.
 - **macos-defaults.sh** — Dock, Finder, login window, menu bar clock, Activity Monitor, screencapture. Safe to re-run.
 
 ## Uninstalling Nix / nix-darwin
@@ -41,6 +42,20 @@ If you used this repo with nix-darwin and are switching to the Brewfile/setup.sh
 1. Uninstall nix-darwin and Nix using the method you used to install (e.g. [Determinate’s uninstaller](https://github.com/DeterminateSystems/nix-installer#uninstalling) or the [official uninstall steps](https://nixos.org/manual/nix/stable/installation/installing-binary.html#uninstalling-nix)).
 2. Remove any darwin-related launchd config or symlinks if they remain.
 3. Clone this repo and run `./setup.sh` (or the step-specific options above) to install tools and dotfiles via Homebrew.
+
+## Vim + Neovim plugins
+
+Plugin installation is automatic during `./setup.sh` and `./setup.sh --dotfiles-only`.
+
+If you need to re-run it manually:
+
+```bash
+./scripts/install-vim-plug.sh
+```
+
+This installs vim-plug for both Vim and Neovim, then runs `PlugInstall` for each.
+
+For formatting and linting, this setup expects global tools (e.g. `prettier`, `eslint`) available in `$PATH`.
 
 ## Links
 

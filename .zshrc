@@ -20,10 +20,7 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
-# Cursor CLI
 export PATH=$HOME/.local/bin:$PATH
-
-# Composer binaries
 export PATH=$PATH:$HOME/.composer/vendor/bin
 
 # Golang (formula: go)
@@ -33,24 +30,14 @@ if command -v brew &>/dev/null; then
   export PATH=$PATH:${GOPATH}/bin:${GOROOT}/bin
 fi
 
-# NVM
-export NVM_LAZY_LOAD=true
-export NVM_COMPLETION=true
-
-# Custom SSH agent socket to avoid conflicts with macOS native agent
-export SSH_AUTH_SOCK="$HOME/.ssh/auth_sock"
-if [ ! -S "$SSH_AUTH_SOCK" ]; then
-  eval $(ssh-agent -a "$SSH_AUTH_SOCK") >/dev/null 2>&1
-fi
-
 ZSH_THEME="robbyrussell"
 
-plugins=(git gpg-agent ssh-agent ssh-agent kubectl)
+plugins=(git gpg-agent ssh-agent kubectl)
 
-# ssh-agent plugin config
-zstyle :omz:plugins:ssh-agent quiet yes
-
-source $ZSH/oh-my-zsh.sh
+ZSH=${ZSH:-$HOME/.oh-my-zsh}
+if [ -f "$ZSH/oh-my-zsh.sh" ]; then
+  source "$ZSH/oh-my-zsh.sh"
+fi
 source $HOME/.aliases
 
 # Starship prompt

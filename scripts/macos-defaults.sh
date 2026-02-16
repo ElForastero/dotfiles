@@ -20,6 +20,7 @@ defaults write com.apple.finder AppleShowAllFiles -bool true
 defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 
 # Login window (requires sudo)
+echo "The following settings require sudo (login window). You may be prompted for your password."
 sudo defaults write com.apple.loginwindow GuestEnabled -bool false
 sudo defaults write com.apple.loginwindow SHOWFULLNAME -bool false
 

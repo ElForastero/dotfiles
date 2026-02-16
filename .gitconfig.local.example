@@ -1,0 +1,7 @@
+# Copy to ~/.gitconfig.local and fill in your details.
+# This file is gitignored; the main .gitconfig includes it.
+#
+# [user]
+#     name = Your Name
+#     email = you@example.com
+#     signingkey = YOUR_GPG_KEY_ID

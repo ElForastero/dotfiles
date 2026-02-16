@@ -1,3 +1,34 @@
+# Essential exports (needed for non-interactive and Cursor agent)
+export PATH=$HOME/.local/bin:$PATH
+export PATH=$PATH:$HOME/.composer/vendor/bin
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools
+export GOPATH=$HOME/go
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+if command -v brew &>/dev/null; then
+  export GOROOT="$(brew --prefix go)/libexec"
+  export PATH=$PATH:${GOPATH}/bin:${GOROOT}/bin
+fi
+
+# Non-interactive: stop after PATH so scripts get a working environment
+[[ $- != *i* ]] && return
+
+# Minimal mode for Cursor AI agent: skip interactive bloat when agent runs shell commands
+if [[ -n "$VSCODE_GIT_ASKPASS_NODE" && "$VSCODE_GIT_ASKPASS_NODE" == *"Cursor"* && ! -t 0 ]]; then
+  return
+fi
+
+# ── Interactive config below ──
+
+# OPENSPEC:START
+# OpenSpec shell completions configuration
+fpath=("$HOME/.oh-my-zsh/custom/completions" $fpath)
+autoload -Uz compinit
+compinit
+# OPENSPEC:END
+
 # Better history
 setopt HIST_VERIFY
 setopt SHARE_HISTORY
@@ -13,27 +44,8 @@ setopt AUTO_CD
 setopt AUTO_PUSHD
 setopt PUSHD_IGNORE_DUPS
 
-# RN Android Studio
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-
-export PATH=$HOME/.local/bin:$PATH
-export PATH=$PATH:$HOME/.composer/vendor/bin
-
-# Golang (formula: go)
-export GOPATH=$HOME/go
-if command -v brew &>/dev/null; then
-  export GOROOT="$(brew --prefix go)/libexec"
-  export PATH=$PATH:${GOPATH}/bin:${GOROOT}/bin
-fi
-
 ZSH_THEME="robbyrussell"
-
-plugins=(git gpg-agent ssh-agent kubectl)
-
+plugins=(git gpg-agent ssh-agent kubectl tmux)
 ZSH=${ZSH:-$HOME/.oh-my-zsh}
 if [ -f "$ZSH/oh-my-zsh.sh" ]; then
   source "$ZSH/oh-my-zsh.sh"
@@ -49,3 +61,9 @@ fi
 if command -v kubectl &>/dev/null; then
   source <(kubectl completion zsh)
 fi
+
+# VSCode Terminal Shell Integration
+[[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
+
+# bun completions
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"

@@ -20,8 +20,13 @@ link .aliases            .aliases
 link .editorconfig       .editorconfig
 link .gitconfig          .gitconfig
 link .ideavimrc          .ideavimrc
+link .vimrc              .vimrc
 link init.vim            .config/nvim/init.vim
 link ssh/config          .ssh/config
 
 if [[ -f "$ROOT/gpg-agent.conf" ]]; then link gpg-agent.conf .gnupg/gpg-agent.conf; fi
 if [[ -f "$ROOT/gpg.conf" ]]; then link gpg.conf .gnupg/gpg.conf; fi
+
+if [[ ! -f "$HOME/.gitconfig.local" ]]; then
+  echo "Reminder: create ~/.gitconfig.local with your [user] name, email, and optional signingkey. See .gitconfig.local.example"
+fi

@@ -4,12 +4,13 @@
 #   ./setup.sh --brew-only  # only Homebrew + Brewfile
 #   ./setup.sh --dotfiles-only
 #   ./setup.sh --macos-defaults
+#   ./setup.sh --dvorak
 set -e
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 if [[ "${1:-}" == "-h" || "${1:-}" == "--help" ]]; then
-  echo "Usage: ./setup.sh [--brew-only | --dotfiles-only | --macos-defaults]"
+  echo "Usage: ./setup.sh [--brew-only | --dotfiles-only | --macos-defaults | --dvorak]"
   exit 0
 fi
 
@@ -19,16 +20,20 @@ case "${1:-full}" in
     ;;
   --dotfiles-only)
     "$ROOT/scripts/link-dotfiles.sh"
-    bash "$ROOT/scripts/install-vim-plug.sh"
+    "$ROOT/scripts/install-vim-plug.sh"
     ;;
   --macos-defaults)
     "$ROOT/scripts/macos-defaults.sh"
     ;;
+  --dvorak)
+    "$ROOT/scripts/install-dvorak.sh"
+    ;;
   full)
     "$ROOT/scripts/install-brew.sh"
     "$ROOT/scripts/link-dotfiles.sh"
-    bash "$ROOT/scripts/install-vim-plug.sh"
+    "$ROOT/scripts/install-vim-plug.sh"
     "$ROOT/scripts/macos-defaults.sh"
+    "$ROOT/scripts/install-dvorak.sh"
     ;;
   *)
     echo "Unknown option. Use --help."

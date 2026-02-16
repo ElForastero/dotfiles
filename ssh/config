@@ -1,4 +1,8 @@
 Include ~/.colima/ssh_config
 
 Host *
+   IgnoreUnknown UseKeychain
    AddKeysToAgent yes
+   UseKeychain yes
+   IdentitiesOnly yes
+   IdentityFile ~/.ssh/id_ecdsa_sk_rk

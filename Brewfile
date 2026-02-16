@@ -1,5 +1,5 @@
-tap 'teamookla/speedtest'
-tap 'jesseduffield/lazygit'
+# tap 'teamookla/speedtest'
+# tap 'jesseduffield/lazygit'
 
 brew 'fluxcd/tap/flux'
 
@@ -15,11 +15,12 @@ brew 'qrencode'
 brew 'httpie'
 brew 'cowsay'
 brew 'jq'
+brew 'mkcert'
+brew 'tmux'
+
 
 # Environments
-brew 'node'
 brew 'nvm'
-brew 'yarn'
 brew 'pnpm'
 brew 'php'
 brew 'composer'
@@ -41,9 +42,13 @@ brew 'starship'
 # Productivity
 cask 'rectangle'
 
+# Keyboard
+cask 'programmer-dvorak'
+
 # React Native
 brew 'cocoapods'
 brew 'watchman'
+brew 'fastlane'
 
 # Fonts
 cask 'font-jetbrains-mono-nerd-font'
@@ -59,6 +64,7 @@ cask 'jetbrains-toolbox'
 cask 'sublime-text'
 cask 'insomnia'
 brew 'neovim'
+brew 'lazydocker'
 
 # Browsers
 cask 'firefox'
@@ -86,8 +92,10 @@ brew 'ansible'
 brew 'hashicorp/tap/terraform'
 brew 'docker'
 brew 'docker-compose'
+# brew 'docker-buildx'
 brew 'colima'
 brew 'k9s'
+brew 'awscli'
 
 # Misc
 cask 'raspberry-pi-imager'

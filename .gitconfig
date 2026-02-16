@@ -1,14 +1,12 @@
 [core]
         quotepath = off
         pager = delta
-[user]
-        name = Eugene Dzhumak
-        email = elforastero@ya.ru
-        #signingkey = DF9F7E98D709CD4C9097FE673716F24E0A8F01B9
+[include]
+        path = ~/.gitconfig.local
 [commit]
-        #gpgsign = true
+        gpgsign = true
 [tag]
-        #gpgSign = true
+        gpgSign = true
 [pull]
         rebase = true
 [push]

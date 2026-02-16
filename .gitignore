@@ -1,0 +1,18 @@
+# Local overrides (contain personal data / secrets)
+.gitconfig.local
+
+# GPG private material
+*.gpg
+secring.*
+
+# SSH private keys
+ssh/id_*
+ssh/*.pem
+
+# macOS junk
+.DS_Store
+
+# Editor temp files
+*.swp
+*.swo
+*~

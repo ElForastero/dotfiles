@@ -41,9 +41,18 @@ defaults write com.apple.screencapture disable-shadow -bool true
 defaults write com.apple.screencapture location -string "$HOME/Desktop/Screenshots"
 defaults write com.apple.screencapture type -string "png"
 
+# Move windows by dragging any part of the window
+defaults write -g NSWindowShouldDragOnGesture -bool true
+
+# Disable windows opening animation
+defaults write -g NSAutomaticWindowAnimationsEnabled -bool false
+
+# Disable Displays have separate Spaces
+defaults write com.apple.spaces spans-displays -bool true
+
 # Restart affected apps
-killall Dock 2>/dev/null || true
-killall Finder 2>/dev/null || true
-killall SystemUIServer 2>/dev/null || true
+for app in Dock Finder SystemUIServer; do
+  pgrep -x "$app" >/dev/null && killall "$app"
+done
 
 echo "macOS defaults applied. You may need to log out for login-window changes."

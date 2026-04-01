@@ -30,3 +30,6 @@ alias h='history'
 # Machine-specific / optional (minikube, YubiKey, etc.)
 # Uncomment or override in local config as needed:
 # alias vim='nvim'
+
+# Claude Code
+alias ccwork="CLAUDE_CONFIG_DIR=~/.claude-work claude"

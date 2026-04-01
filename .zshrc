@@ -6,6 +6,9 @@ export PATH=$PATH:$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/tools
 export GOPATH=$HOME/go
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+export PATH="/opt/homebrew/bin:$PATH"
+export PATH="/opt/homebrew/sbin:$PATH"
+export PATH="$(brew --prefix libpq)/bin:$PATH"
 
 if command -v brew &>/dev/null; then
   export GOROOT="$(brew --prefix go)/libexec"
@@ -62,8 +65,14 @@ if command -v kubectl &>/dev/null; then
   source <(kubectl completion zsh)
 fi
 
+# ngrok completions
+if command -v ngrok &>/dev/null; then
+eval "$(ngrok completion)"
+fi
+
 # VSCode Terminal Shell Integration
 [[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
 
 # bun completions
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
+

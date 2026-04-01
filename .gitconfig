@@ -4,9 +4,9 @@
 [include]
         path = ~/.gitconfig.local
 [commit]
-        gpgsign = true
+	#gpgsign = true
 [tag]
-        gpgSign = true
+	#gpgSign = true
 [pull]
         rebase = true
 [push]
@@ -22,3 +22,5 @@
 [blame]
 	ignoreRevsFile = .git-blame-ignore-revs
 	markIgnoredLines = true
+[user]
+	name = Evgheni Djumac

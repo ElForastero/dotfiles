@@ -1,6 +1,3 @@
-# tap 'teamookla/speedtest'
-# tap 'jesseduffield/lazygit'
-
 brew 'fluxcd/tap/flux'
 
 # Utilities
@@ -28,6 +25,7 @@ brew 'go'
 brew 'go-task'
 brew 'golang-migrate'
 brew 'golangci-lint'
+brew 'pipx'
 
 # Storages
 brew 'redis'
@@ -38,9 +36,6 @@ brew 'jesseduffield/lazygit/lazygit'
 
 # Prompt
 brew 'starship'
-
-# Productivity
-cask 'rectangle'
 
 # Keyboard
 cask 'programmer-dvorak'
@@ -65,6 +60,10 @@ cask 'sublime-text'
 cask 'insomnia'
 brew 'neovim'
 brew 'lazydocker'
+brew 'gh'
+brew 'anomalyco/tap/opencode'
+brew 'claude-code'
+brew 'cursor-cli'
 
 # Browsers
 cask 'firefox'
@@ -74,6 +73,7 @@ cask 'google-chrome'
 cask 'telegram'
 cask 'discord'
 cask 'zoom'
+cask 'slack'
 
 # Security
 brew 'gnupg'
@@ -91,11 +91,13 @@ brew 'helm'
 brew 'ansible'
 brew 'hashicorp/tap/terraform'
 brew 'docker'
-brew 'docker-compose'
-# brew 'docker-buildx'
-brew 'colima'
 brew 'k9s'
 brew 'awscli'
+
+# Windows management
+tap 'FelixKratz/formulae'
+brew 'borders'
+cask 'nikitabobko/tap/aerospace'
 
 # Misc
 cask 'raspberry-pi-imager'

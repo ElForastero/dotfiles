@@ -59,3 +59,4 @@ For formatting and linting, this setup expects global tools (e.g. `prettier`, `e
 - Resident SSH keys: https://www.yubico.com/blog/github-now-supports-ssh-security-keys
 - AstroNvim: https://github.com/AstroNvim/AstroNvim
 - Nerd JetBrains Mono font: https://github.com/ryanoasis/nerd-fonts#option-4-homebrew-fonts
+- Useful Karabiner Mappings: https://ke-complex-modifications.pqrs.org/?q=Programmer%20Dvorak

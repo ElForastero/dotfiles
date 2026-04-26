@@ -33,3 +33,10 @@ alias h='history'
 
 # Claude Code
 alias ccwork="CLAUDE_CONFIG_DIR=~/.claude-work claude"
+alias whaiku="CLAUDE_CONFIG_DIR=~/.claude-work claude --model haiku --dangerously-skip-permissions --chrome"
+alias wsonnet="CLAUDE_CONFIG_DIR=~/.claude-work claude --model sonnet --dangerously-skip-permissions --chrome"
+alias wopus="CLAUDE_CONFIG_DIR=~/.claude-work claude --model opus --dangerously-skip-permissions --chrome"
+
+alias haiku="claude --model haiku --dangerously-skip-permissions --chrome"
+alias sonnet="claude --model sonnet --dangerously-skip-permissions --chrome"
+alias opus="claude --model opus --dangerously-skip-permissions --chrome"

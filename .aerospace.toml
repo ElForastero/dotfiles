@@ -249,3 +249,12 @@ on-mode-changed = []
 [[on-window-detected]]
     if.app-id = 'com.yubico.yubioath'
     run = 'layout floating'
+
+[[on-window-detected]]
+    if.app-id = 'us.zoom.xos'
+    run = 'layout floating'
+
+[[on-window-detected]]
+    if.app-id = 'com.google.Chrome'
+    if.window-title-regex-substring = 'Claude \(MCP\)'
+    run = 'layout floating'

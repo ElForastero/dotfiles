@@ -80,8 +80,6 @@ brew 'gnupg'
 brew 'sops'
 brew 'pinentry-mac'
 brew 'ykman'
-brew 'yubico-piv-tool'
-brew 'yubikey-personalization'
 brew 'openssh'
 brew 'libfido2'
 

@@ -22,6 +22,17 @@ link() {
   ln -sf "$src" "$dst"
 }
 
+copy() {
+  local src="$ROOT/$1"
+  local dst="$HOME/$2"
+  if [[ ! -e "$src" ]]; then return; fi
+  if [[ -e "$dst" ]]; then return; fi
+  echo "Copying: $src -> $dst"
+  if [[ "$DRY_RUN" == "true" ]]; then return; fi
+  mkdir -p "$(dirname "$dst")"
+  cp "$src" "$dst"
+}
+
 link .zshrc              .zshrc
 link .aliases            .aliases
 link .editorconfig       .editorconfig
@@ -30,7 +41,7 @@ link .aerospace.toml     .aerospace.toml
 link .ideavimrc          .ideavimrc
 link .vimrc              .vimrc
 link init.vim            .config/nvim/init.vim
-link ssh/config          .ssh/config
+copy ssh/config          .ssh/config
 
 if [[ -f "$ROOT/gpg-agent.conf" ]]; then link gpg-agent.conf .gnupg/gpg-agent.conf; fi
 if [[ -f "$ROOT/gpg.conf" ]]; then link gpg.conf .gnupg/gpg.conf; fi

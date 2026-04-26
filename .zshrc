@@ -10,6 +10,9 @@ export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/opt/homebrew/sbin:$PATH"
 export PATH="$(brew --prefix libpq)/bin:$PATH"
 
+# Added by LM Studio CLI tool (lms)
+export PATH="$PATH:$HOME/.lmstudio/bin"
+
 if command -v brew &>/dev/null; then
   export GOROOT="$(brew --prefix go)/libexec"
   export PATH=$PATH:${GOPATH}/bin:${GOROOT}/bin
@@ -75,4 +78,3 @@ fi
 
 # bun completions
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
-
